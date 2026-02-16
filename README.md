@@ -25,14 +25,14 @@ A Springboot application that produce set of APIs to be used by front-end and mo
 ## 📦 Project Structure
 
 ```
-src/main/java
+src/main/java/com/edts/concert_ticket_booking
 ├── controller   → REST endpoints
 ├── services     → business logic
 ├── repository   → database access
 ├── entity       → JPA models
 ├── dto          → response objects
 ├── exception    → global error handling
-└── api          → API response wrapper
+├── api          → API response wrapper
 └── logging      → MDC logging for once per request log
 ```
 
@@ -67,10 +67,28 @@ Response Format:
 ```json
 {
     "success": true,
+    "code": "SUCCESS",
     "message": "Concerts retrieved successfully",
-    "data": [...],
-    "requestId": "83552cf5-f819-4861-8f9a-972be498e17e",
-    "timestamp": "2026-02-16T07:54:58.422493"
+    "data": [
+        {
+            "availableTickets": 87,
+            "id": 1,
+            "name": "DEWA 19",
+            "reservationEnd": "2026-02-17T00:00:00",
+            "reservationStart": "2026-02-14T00:00:00",
+            "totalTickets": 0
+        },
+        {
+            "availableTickets": 89,
+            "id": 2,
+            "name": "Coldplay",
+            "reservationEnd": "2026-02-17T00:00:00",
+            "reservationStart": "2026-02-14T00:00:00",
+            "totalTickets": 0
+        }
+    ],
+    "requestId": "55fe793c-9cb7-4f6e-b9e4-f26ac887fac6",
+    "timestamp": "2026-02-16T09:05:42.220423"
 }
 ```
 
