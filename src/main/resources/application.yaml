@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: concert-ticket-reservation
+  datasource:
+    url: jdbc:mysql://localhost:3306/concert_ticket_reservation_db
+    username: rizqirakha
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false # Set to true for debugging, false for production
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - [%X{requestId}] %msg%n"
